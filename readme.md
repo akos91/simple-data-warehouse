@@ -1,6 +1,8 @@
-#Simple Data Warehouse
+# Simple Data Warehouse
 
 At startup the application reads the provided csv file and loads it into an in-memory database which can be queried via REST API.
+
+Deployed to AWS. The API can be reached on the following URL: http://ec2-18-218-141-136.us-east-2.compute.amazonaws.com:8080/advertisement/stats
 
 ## REST API usage
 There's one API end point to retrieve queries on the advertisement data.
