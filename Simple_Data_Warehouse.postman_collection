@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "0b1e6d30-10f0-4da7-b017-6f464fb4de85",
+		"name": "Simple Data Warehouse",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "advertisement stats filter exmaple",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"metrics\": [ \"CLICK\" ],\r\n    \"dimensions\": [\"DATASOURCE\"],\r\n    \"filters\": {\"DATASOURCE\":\"Google Ads,Twitter Ads\", \"FROM_DATE\":\"2019-11-10\", \"TO_DATE\":\"2019-11-13\"}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/advertisement/stats",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"advertisement",
+						"stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "advertisement stats group by ds example",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"metrics\": [ \"CLICK\", \"CTR\", \"IMPRESSION\" ],\r\n    \"dimensions\": [\"DATASOURCE\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/advertisement/stats",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"advertisement",
+						"stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "advertisement stats all example",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"metrics\": [ \"CLICK\", \"CTR\", \"IMPRESSION\" ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/advertisement/stats",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"advertisement",
+						"stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "advertisement stats daily stat example",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"metrics\": [ \"CLICK\", \"CTR\", \"IMPRESSION\" ],\r\n    \"dimensions\": [\"DAILY\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/advertisement/stats",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"advertisement",
+						"stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "advertisement stats error example",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dimensions\": [\"DAILY\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/advertisement/stats",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"advertisement",
+						"stats"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
